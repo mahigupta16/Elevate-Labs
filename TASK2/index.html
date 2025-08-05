@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1><i class="fas fa-tasks"></i> Smart To-Do List</h1>
+            <p class="subtitle">Organize your tasks efficiently</p>
+        </header>
+
+        <main class="todo-app">
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        placeholder="What needs to be done?"
+                        maxlength="100"
+                        aria-label="Enter new task"
+                    >
+                    <button id="addBtn" class="add-btn" aria-label="Add task">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stats">
+                    <span id="totalTasks">0</span> total tasks
+                </div>
+                <div class="stats">
+                    <span id="completedTasks">0</span> completed
+                </div>
+                <div class="stats">
+                    <span id="pendingTasks">0</span> pending
+                </div>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="taskList" class="task-list" aria-label="Task list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+
+            <div id="emptyState" class="empty-state">
+                <i class="fas fa-clipboard-list"></i>
+                <p>No tasks yet. Add your first task above!</p>
+            </div>
+
+            <div class="actions">
+                <button id="clearCompleted" class="action-btn" disabled>
+                    <i class="fas fa-trash"></i> Clear Completed
+                </button>
+                <button id="clearAll" class="action-btn" disabled>
+                    <i class="fas fa-trash-alt"></i> Clear All
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
