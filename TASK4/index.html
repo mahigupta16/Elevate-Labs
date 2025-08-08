@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task 4 – Responsive Website (Media Queries)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">ResponsiveCo</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Build once. Look great everywhere.</h1>
+        <p>Convert a desktop-only page into a mobile-friendly experience using CSS media queries and flexible layouts.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#features">Explore Features</a>
+          <a class="btn outline" href="#about">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop" alt="Code and devices" />
+      </div>
+    </div>
+  </section>
+
+  <main class="container layout">
+    <section id="features" class="content">
+      <h2>Features</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Mobile-first</h3>
+          <p>Start with small screens in mind and progressively enhance for larger viewports.</p>
+        </article>
+        <article class="card">
+          <h3>Flexible grids</h3>
+          <p>Use CSS Grid and Flexbox to create layouts that adapt naturally.</p>
+        </article>
+        <article class="card">
+          <h3>Fluid media</h3>
+          <p>Ensure images and videos scale within their containers without overflow.</p>
+        </article>
+        <article class="card">
+          <h3>Accessible nav</h3>
+          <p>Make navigation usable with touch and keyboard, and readable at all sizes.</p>
+        </article>
+        <article class="card">
+          <h3>Typography</h3>
+          <p>Responsive font sizing to maintain hierarchy and readability.</p>
+        </article>
+        <article class="card">
+          <h3>Performance</h3>
+          <p>Ship only what’s necessary and avoid layout thrash and scroll issues.</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="sidebar" aria-label="Sidebar">
+      <h2>Quick Tips</h2>
+      <ul class="tips">
+        <li>Add the viewport meta tag.</li>
+        <li>Make widths fluid; avoid fixed widths.</li>
+        <li>Stack columns vertically on small screens.</li>
+        <li>Reduce font sizes and spacing responsibly.</li>
+        <li>Ensure images: max-width: 100%; height: auto.</li>
+        <li>Test using DevTools device toolbar.</li>
+      </ul>
+
+      <div class="promo">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80&auto=format&fit=crop" alt="Laptop on desk">
+        <p>Resize the window to see the layout adapt from desktop to mobile.</p>
+      </div>
+    </aside>
+  </main>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>Media queries enable condition-based styles. Target breakpoints like 1024px, 768px, and 480px to optimize for tablets and phones.</p>
+    </div>
+  </section>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ResponsiveCo. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
